@@ -283,15 +283,15 @@ export class AttributeDropdownWrapped
             selection,
             isInverted
         });
-    }
+    };
 
     private onSearch = (searchString: string) => {
         this.setState({ searchString });
-    }
+    };
 
     private onRangeChange = (_searchString: string, from: number, to: number) => {
         range(from, to).forEach(this.dataSource.getRowAt);
-    }
+    };
 
     private onDropdownToggle(isDropdownOpen: boolean) {
         const { isListReady, isListInitialising } = this.state;

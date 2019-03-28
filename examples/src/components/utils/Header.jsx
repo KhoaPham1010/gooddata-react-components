@@ -23,7 +23,7 @@ class Header extends React.Component {
     toggleBackendInfo = () => {
         const { displayBackendInfo } = this.state;
         this.setState({ displayBackendInfo: !displayBackendInfo });
-    }
+    };
 
     renderBackendInfo = () => {
         const { isUserLoggedIn } = this.props;
@@ -62,7 +62,7 @@ class Header extends React.Component {
                 <span className="backendInfoClose" onClick={this.toggleBackendInfo} />
             </div>
         );
-    }
+    };
 
     renderLoggingBlock = () => {
         const { isUserLoggedIn } = this.props;
@@ -86,7 +86,7 @@ class Header extends React.Component {
         }
         // s-isLoggedIn is used to check the site is logged in
         return <div className="gd-header-menu-item button-logout button-header s-isLoggedIn" onClick={this.props.logoutAction}>Logout</div>;
-    }
+    };
 
     render() {
         const { location: { pathname }, topNavigationRoutes, routes } = this.props;

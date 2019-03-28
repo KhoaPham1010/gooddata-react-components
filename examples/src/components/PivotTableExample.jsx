@@ -25,7 +25,7 @@ export class PivotTableExample extends Component {
         withAttributes: PropTypes.bool,
         withPivot: PropTypes.bool,
         hasError: PropTypes.bool
-    }
+    };
 
     static defaultProps = {
         className: undefined,
@@ -33,7 +33,7 @@ export class PivotTableExample extends Component {
         withAttributes: false,
         withPivot: false,
         hasError: false
-    }
+    };
 
     render() {
         const { withMeasures, withAttributes, withPivot, hasError, className } = this.props;

@@ -228,7 +228,7 @@ class Login extends React.Component {
             You can try logging out and logging back in. ${error}`,
             isProjectAssigned: null
         });
-    }
+    };
 
     checkProjectAvailability = (newProfileUri) => {
         return (
@@ -270,7 +270,7 @@ class Login extends React.Component {
             .catch((error) => {
                 this.setErrorCheckingProjectAvailability(error);
             });
-    }
+    };
 
     logIn = (email, password) => {
         this.setState({
@@ -298,7 +298,7 @@ class Login extends React.Component {
                 });
                 return error;
             });
-    }
+    };
 
     render() {
         const { isLoading, isProjectAssigned, email, password, error } = this.state;

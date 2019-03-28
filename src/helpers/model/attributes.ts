@@ -15,7 +15,7 @@ export class AttributeBuilder implements VisualizationObject.IVisualizationAttri
     public alias = (alias: string) => {
         this.visualizationAttribute.alias = alias;
         return this;
-    }
+    };
 
     public localIdentifier = (localIdentifier: string) => {
         this.visualizationAttribute.localIdentifier = localIdentifier;

@@ -235,7 +235,7 @@ export function visualizationLoadingHOC<T extends ICommonVisualizationProps & ID
                     .slice(0, promiseIndex)
                     .concat(this.pagePromises.slice(promiseIndex + 1));
             }
-        }
+        };
 
         private initSubject() {
             this.subject = DataLayer.createSubject<Execution.IExecutionResponses>((result) => {

@@ -56,11 +56,11 @@ export default class ControlledMenu extends React.Component<IControlledMenuProps
 
     private closeMenu = () => {
         this.props.onOpenedChange(false);
-    }
+    };
 
     private addScrollListeners = () => {
         window.addEventListener('scroll', this.closeMenu, true);
-    }
+    };
 
     private removeScrollListeners = () => {
         window.removeEventListener('scroll', this.closeMenu, true);

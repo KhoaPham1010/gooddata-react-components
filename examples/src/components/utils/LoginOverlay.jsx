@@ -10,11 +10,11 @@ class LoginOverlay extends React.Component {
     static propTypes = {
         isLoggedIn: PropTypes.bool.isRequired,
         onLogin: PropTypes.func
-    }
+    };
 
     static defaultProps = {
         onLogin: () => {}
-    }
+    };
 
     constructor(props) {
         super(props);

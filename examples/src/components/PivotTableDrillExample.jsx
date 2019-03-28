@@ -32,7 +32,7 @@ export class PivotTableDrillExample extends Component {
             drillEvent
         });
         return true;
-    }
+    };
 
     measures = [
         Model.measure(franchiseFeesIdentifier)

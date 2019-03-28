@@ -42,7 +42,7 @@ export default class MenuState extends React.Component<IMenuStateProps, IMenuSta
 
     private isControlled = (): boolean => {
         return typeof this.props.opened === 'boolean';
-    }
+    };
 
     private menuVisibilityChange = (opened: boolean) => {
         this.setState({ opened }, () => {

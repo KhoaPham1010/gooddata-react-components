@@ -266,14 +266,14 @@ export default class HeaderCell extends React.Component<IProps, IState> {
                 });
             }
         }
-    }
+    };
 
     private onMouseLeave = () => {
         this.hideMenuButton();
         this.setState({
             currentSortDirection: this.props.sortDirection
         });
-    }
+    };
 
     private onTextClick = () => {
         const { sortDirection, onSortClick, enableSorting, defaultSortDirection } = this.props;
@@ -295,7 +295,7 @@ export default class HeaderCell extends React.Component<IProps, IState> {
             currentSortDirection: nextSort
         });
         onSortClick(nextSort);
-    }
+    };
 
     private showMenuButton = () => {
         if (this.state.isMenuOpen) {
@@ -305,7 +305,7 @@ export default class HeaderCell extends React.Component<IProps, IState> {
         this.setState({
             isMenuButtonVisible: true
         });
-    }
+    };
 
     private hideMenuButton = () => {
         if (this.state.isMenuOpen) {
@@ -315,21 +315,21 @@ export default class HeaderCell extends React.Component<IProps, IState> {
         this.setState({
             isMenuButtonVisible: false
         });
-    }
+    };
 
     private hideAndCloseMenu = () => {
         this.setState({
             isMenuButtonVisible: false,
             isMenuOpen: false
         });
-    }
+    };
 
     private menuItemClick = (menuAggregationClickConfig: IMenuAggregationClickConfig) => {
         this.hideAndCloseMenu();
         if (this.props.onMenuAggregationClick) {
             this.props.onMenuAggregationClick(menuAggregationClickConfig);
         }
-    }
+    };
 
     private handleMenuOpenedChange = (visible: boolean) => {
         this.setState({

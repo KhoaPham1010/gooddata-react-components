@@ -79,7 +79,7 @@ export default class PositionedMenuContent extends React.Component<
 
     private setElMenu = (el: HTMLElement) => {
         this.menuEl = el;
-    }
+    };
 
     private positionMenu = () => {
         if (!this.props.togglerEl || !this.menuEl) {

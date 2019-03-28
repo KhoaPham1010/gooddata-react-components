@@ -199,7 +199,7 @@ storiesOf('Helper components/Menu', module)
                 this.setState(state => ({
                     opened: !state.opened
                 }));
-            }
+            };
 
             private onOpenedChange = (opened: boolean) => {
                 this.setState({ opened });

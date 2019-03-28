@@ -324,7 +324,7 @@ export class PivotTableDrillingExample extends Component {
             drillingPresetKeys,
             drillableItems: getDrillableItems(drillingPresetKeys)
         });
-    }
+    };
     onTotalPresetChange = (totalPresetKey) => {
         const totalPresetKeys = {
             ...this.state.totalPresetKeys,
@@ -333,7 +333,7 @@ export class PivotTableDrillingExample extends Component {
         this.setState({
             totalPresetKeys
         });
-    }
+    };
     onFilterPresetChange = (filterPresetKey) => {
         const filterPresetKeys = {
             ...this.state.filterPresetKeys,
@@ -342,27 +342,27 @@ export class PivotTableDrillingExample extends Component {
         this.setState({
             filterPresetKeys
         });
-    }
+    };
     onBucketPresetChange = (bucketPresetKey) => {
         this.setState({
             bucketPresetKey
         });
-    }
+    };
     onSortingPresetChange = (sortingPresetKey) => {
         this.setState({
             sortingPresetKey
         });
-    }
+    };
     onMenuPresetChange = (menuPresetKey) => {
         this.setState({
             menuPresetKey
         });
-    }
+    };
     onPivotTableSizeChange = (pivotTableSizeKey) => {
         this.setState({
             pivotTableSizeKey
         });
-    }
+    };
 
     onDrill = (drillEvent) => {
         // eslint-disable-next-line no-console
@@ -371,7 +371,7 @@ export class PivotTableDrillingExample extends Component {
             drillEvent
         });
         return true;
-    }
+    };
 
     render() {
         const {

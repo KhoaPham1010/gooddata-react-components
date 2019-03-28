@@ -35,13 +35,13 @@ export class ParentFilterExample extends Component {
         this.setState({
             stateFilterValues
         });
-    }
+    };
 
     onCityChange = (cityFilterValues) => {
         this.setState({
             cityFilterValues
         });
-    }
+    };
 
     renderVisualization(
         stateFilterValues,

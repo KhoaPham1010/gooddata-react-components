@@ -55,7 +55,7 @@ export class App extends React.Component {
             isLoadingUserState: false,
             errorMessage
         });
-    }
+    };
 
     isUserLoggedIn = () => {
         this.setState({
@@ -67,7 +67,7 @@ export class App extends React.Component {
             }, (errorMessage) => {
                 this.onUserLogin(false, errorMessage);
             });
-    }
+    };
 
     logout() {
         this.setState({
@@ -135,7 +135,7 @@ export class App extends React.Component {
             }
         </div>
         );
-    }
+    };
 
     render() {
         const { isLoggedIn, errorMessage } = this.state;

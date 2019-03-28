@@ -36,14 +36,14 @@ export default class MenuOpenedByHover extends React.Component<IMenuOpenedByShar
 
     private clearCloseDelayTimer = () => {
         window.clearTimeout(this.timerCloseDelay);
-    }
+    };
 
     private hoverStart = () => {
         this.clearCloseDelayTimer();
         this.timerCloseDelay = window.setTimeout(() => {
             this.props.onOpenedChange(true);
         }, MenuOpenedByHover.openCloseDelayMs);
-    }
+    };
 
     private hoverEnd = () => {
         this.clearCloseDelayTimer();

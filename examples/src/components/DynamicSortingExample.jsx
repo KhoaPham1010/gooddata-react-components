@@ -26,13 +26,13 @@ export class DynamicSortingExample extends Component {
         this.setState({
             sortOption
         });
-    }
+    };
 
     onDirectionChange = direction => () => {
         this.setState({
             direction
         });
-    }
+    };
 
     getOrderLabel = dir => ({
         desc: 'descending',

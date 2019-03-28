@@ -29,17 +29,17 @@ export class MeasureBuilderBase<T extends VisualizationObject.IMeasureDefinition
     public alias = (alias: string) => {
         this.measure.alias = alias;
         return this;
-    }
+    };
 
     public format = (format: string) => {
         this.measure.format = format;
         return this;
-    }
+    };
 
     public title = (title: string) => {
         this.measure.title = title;
         return this;
-    }
+    };
 
     public localIdentifier = (localIdentifier: string) => {
         this.measure.localIdentifier = localIdentifier;
@@ -60,12 +60,12 @@ export class MeasureBuilder extends MeasureBuilderBase<VisualizationObject.IMeas
     public aggregation = (aggregation: VisualizationObject.MeasureAggregation) => {
         this.measure.definition.measureDefinition.aggregation = aggregation;
         return this;
-    }
+    };
 
     public ratio = () => {
         this.measure.definition.measureDefinition.computeRatio = true;
         return this;
-    }
+    };
 
     public filters = (...filters: VisualizationObject.VisualizationObjectFilter[]) => {
         this.measure.definition.measureDefinition.filters = filters;

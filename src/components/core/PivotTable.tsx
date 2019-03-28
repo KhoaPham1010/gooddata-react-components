@@ -484,7 +484,7 @@ export class PivotTableInner extends BaseVisualization<IPivotTableInnerProps, IP
             isRowTotal ? 'gd-row-total' : null
         );
         return className;
-    }
+    };
 
     public getHeaderClass = (classList: string) => (headerClassParams: any): string => {
         const colDef: ColDef = headerClassParams.colDef;
@@ -506,11 +506,11 @@ export class PivotTableInner extends BaseVisualization<IPivotTableInnerProps, IP
             isFirstColumn ? 'gd-column-group-header--first' : null
         );
         return className;
-    }
+    };
 
     public getExecution = () => {
         return this.state.execution;
-    }
+    };
 
     public createDataSource(resultSpec: AFM.IResultSpec, getPage: IGetPage, cancelPagePromises: () => void) {
         const onSuccess = (execution: Execution.IExecutionResponses, columnDefs: IGridHeader[]) => {
@@ -543,7 +543,7 @@ export class PivotTableInner extends BaseVisualization<IPivotTableInnerProps, IP
     public onGridReady = (params: GridReadyEvent) => {
         this.gridApi = params.api;
         this.setGridDataSource();
-    }
+    };
 
     public setGridDataSource() {
         this.setState({ execution: null });
@@ -595,7 +595,7 @@ export class PivotTableInner extends BaseVisualization<IPivotTableInnerProps, IP
             return true;
         }
         return false;
-    }
+    };
 
     public onMenuAggregationClick = ({
         type,
@@ -622,7 +622,7 @@ export class PivotTableInner extends BaseVisualization<IPivotTableInnerProps, IP
         }
 
         this.setState({ columnTotals: newColumnTotals });
-    }
+    };
 
     public sortChanged = (event: SortChangedEvent): void => {
         const execution = this.getExecution();
@@ -640,7 +640,7 @@ export class PivotTableInner extends BaseVisualization<IPivotTableInnerProps, IP
                 sortItems
             }
         });
-    }
+    };
 
     public renderVisualization() {
         const { columnDefs, rowData } = this.state;
@@ -797,11 +797,11 @@ export class PivotTableInner extends BaseVisualization<IPivotTableInnerProps, IP
 
     private getExecutionResponse = () => {
         return this.state.execution ? this.state.execution.executionResponse : null;
-    }
+    };
 
     private getColumnTotals = () => {
         return this.state.columnTotals;
-    }
+    };
 
     private getDrillablePredicates(): IHeaderPredicate[] {
         return convertDrillableItemsToPredicates(this.props.drillableItems);

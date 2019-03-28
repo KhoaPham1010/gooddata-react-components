@@ -91,7 +91,7 @@ export class ExecuteExample extends Component {
                 </div>
             </div>
         );
-    }
+    };
 
     render() {
         const { executionNumber, willFail } = this.state;

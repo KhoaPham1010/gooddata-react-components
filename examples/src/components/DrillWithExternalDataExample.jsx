@@ -94,7 +94,7 @@ export class DrillWithExternalDataExample extends React.Component {
             location,
             state: null
         });
-    }
+    };
 
     onStateDrill = (drillTarget) => {
         const { name, id } = drillTarget.drillContext.row[0];
@@ -106,19 +106,19 @@ export class DrillWithExternalDataExample extends React.Component {
             state,
             location: null
         });
-    }
+    };
 
     onStateClear = () => {
         this.setState({
             state: null
         });
-    }
+    };
 
     onLocationClear = () => {
         this.setState({
             location: null
         });
-    }
+    };
 
     onEmployeeDrill = (drillTarget) => {
         const employee = drillTarget.drillContext.row[0];
@@ -163,7 +163,7 @@ export class DrillWithExternalDataExample extends React.Component {
                         }
                     );
             });
-    }
+    };
 
     getFilters = (state, location) => {
         const filters = [];
@@ -174,11 +174,11 @@ export class DrillWithExternalDataExample extends React.Component {
             filters.push(Model.positiveAttributeFilter(locationNameDisplayFormIdentifier, [location.uri]));
         }
         return filters;
-    }
+    };
 
     getMeasure = (identifier, localIdentifier, alias) => Model.measure(identifier)
         .localIdentifier(localIdentifier)
-        .alias(alias)
+        .alias(alias);
 
     getAttribute = (identifier, localIdentifier) => (
         {
@@ -189,7 +189,7 @@ export class DrillWithExternalDataExample extends React.Component {
                 }
             }
         }
-    )
+    );
 
     renderEmployeeDetails = (employeeData) => {
         if (employeeData.isError) {
@@ -200,7 +200,7 @@ export class DrillWithExternalDataExample extends React.Component {
             return <EmployeeProfile {...employeeData.data} />;
         }
         return null;
-    }
+    };
 
     render() {
         const { state, location } = this.state;

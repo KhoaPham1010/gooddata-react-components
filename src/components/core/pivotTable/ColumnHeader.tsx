@@ -60,7 +60,7 @@ class ColumnHeader extends React.Component<IColumnHeaderProps, IColumnHeaderStat
         this.setState({
             sorting: currentSort
         });
-    }
+    };
 
     public getDefaultSortDirection(): AFM.SortDirection {
         return (this.getFieldType() === ATTRIBUTE_FIELD_TYPE) ? ASC : DESC;
@@ -69,7 +69,7 @@ class ColumnHeader extends React.Component<IColumnHeaderProps, IColumnHeaderStat
     public onSortRequested = (sortDir: AFM.SortDirection) => {
         const multiSort = false; // Enable support for multisort with CMD key with 'event.shiftKey';
         this.props.setSort(sortDir, multiSort);
-    }
+    };
 
     public render() {
         const { displayName, enableSorting, menu, column } = this.props;
